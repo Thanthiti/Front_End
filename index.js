@@ -28,10 +28,10 @@ app.get('/', async(req,res)=>{
    }
 })
 
-app.get('/books/:id',async(req,res)=>{
+app.get('/book/:id',async(req,res)=>{
     try{
         const respones = await axios.get(base_url + '/books/' + req.params.id)
-        res.render("books",{books:respones.data})
+        res.render("book",{book:respones.data})
        }catch(err){
         console.error(err)
         res.status(500).send('Error')
