@@ -7,8 +7,8 @@ const path = require("path")
 
 
 //const base_url = "http://node57329-nodepem.proen.app.ruk-com.cloud"
-const base_url = "http://node57329-nodepem.proen.app.ruk-com.cloud"
-    //const base_url = "http://localhost:3000"
+//const base_url = "http://node57329-nodepem.proen.app.ruk-com.cloud"
+const base_url = "http://localhost:3000"
 app.set("views", path.join(__dirname, "/public/views"))
 app.set('view engine', 'ejs')
 app.use(bodyParser.json())
@@ -21,6 +21,7 @@ app.get('/', async(req, res) => {
     try {
         const respones = await axios.get(base_url + '/books')
         res.render("books", { books: respones.data })
+        console.log("Get Books")
     } catch (err) {
         console.error(err)
         res.status(500).send('Error')
@@ -31,6 +32,7 @@ app.get('/book/:id', async(req, res) => {
     try {
         const respones = await axios.get(base_url + '/books/' + req.params.id)
         res.render("book", { book: respones.data })
+        console.log("Get Books 2 ")
     } catch (err) {
         console.error(err)
         res.status(500).send('Error')
