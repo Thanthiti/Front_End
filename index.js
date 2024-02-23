@@ -5,7 +5,6 @@ var bodyParser = require('body-parser')
 const path = require("path")
 
 
-console.log("sd")
 
 const base_url = "http://node57328-nodepem.proen.app.ruk-com.cloud"
 
