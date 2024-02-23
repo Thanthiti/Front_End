@@ -6,9 +6,8 @@ const path = require("path")
 
 
 
-const base_url = "http://node57328-nodepem.proen.app.ruk-com.cloud"
+const base_url = "https://node57328-nodepem.proen.app.ruk-com.cloud"
 
-//const base_url = "http://node58886-test-node.proen.app.ruk-com.cloud"
 //const base_url = "http://localhost:3000"
 app.set("views", path.join(__dirname, "/public/views"))
 app.set('view engine', 'ejs')
@@ -25,7 +24,7 @@ app.get('/', async(req, res) => {
         console.log("Get Books")
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error1')
     }
 })
 
@@ -36,7 +35,7 @@ app.get('/book/:id', async(req, res) => {
         console.log("Get Books 2 ")
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error2')
     }
 })
 
@@ -51,7 +50,7 @@ app.post('/create', async(req, res) => {
         res.redirect('/')
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error3')
     }
 })
 
@@ -62,7 +61,7 @@ app.get('/update/:id', async(req, res) => {
         res.render('update', { book: respones.data })
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error4')
     }
 })
 
@@ -73,7 +72,7 @@ app.post('/update/:id', async(req, res) => {
         res.redirect('/')
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error5')
     }
 })
 
@@ -83,7 +82,7 @@ app.get('/delete/:id', async(req, res) => {
         res.redirect('/')
     } catch (err) {
         console.error(err)
-        res.status(500).send('Error')
+        res.status(500).send('Error6')
     }
 })
 
