@@ -7,7 +7,7 @@ const path = require("path")
 
 
 
-const base_url = "http://node57328-nodepem.proen.app.ruk-com.cloud:11709"
+const base_url = "http://node57328-nodepem.proen.app.ruk-com.cloud"
     //const base_url = "http://node58886-test-node.proen.app.ruk-com.cloud"
     //const base_url = "http://localhost:3000"
 app.set("views", path.join(__dirname, "/public/views"))
